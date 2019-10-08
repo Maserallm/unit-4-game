@@ -1,0 +1,10 @@
+body {
+    background-image: url(../images/avatar-the-last-airbender-wallpapers-1920x1080-for-ipad-2.jpg);
+    background-repeat: no-repeat;
+    background-size: 110%; 
+    /* color: #dee2e6; */
+}
+
+.head1:hover {
+    color: #dee2e6;
+}
