@@ -16,10 +16,10 @@ $(document).ready(function() {
     let air = $("#air-element");
     let fire = $("#fire-element");
 
-    let randomNum1 = Math.floor(Math.random() * 12) + 1;
-    let randomNum2 = Math.floor(Math.random() * 12) + 1;
-    let randomNum3 = Math.floor(Math.random() * 12) + 1;
-    let randomNum4 = Math.floor(Math.random() * 12) + 1;
+    let randomNum1 = Math.floor(Math.random() * 11) + 1;
+    let randomNum2 = Math.floor(Math.random() * 11) + 1;
+    let randomNum3 = Math.floor(Math.random() * 11) + 1;
+    let randomNum4 = Math.floor(Math.random() * 11) + 1;
 
     $(earth).on("click", function () {
 
@@ -28,11 +28,15 @@ $(document).ready(function() {
         console.log(userScore);
 
         if (userScore === targetScore) {
-            $("#wins").html("Wins: " + wins++);
+            wins++;
+            $("#wins").html("Wins: " + wins);
+            $("#victory-defeat").text("<h2>Victory!</h2>")
             console.log("winner winner!");
             reset();
         } else if (userScore > targetScore) {
-            $("#loss").html("Loss: " + loss++);
+            loss++;
+            $("#loss").html("Loss: " + loss);
+            $("#victory-defeat").text("<h2>Defeat!</h2>")
             console.log("loser")
             reset();
         }
@@ -45,11 +49,15 @@ $(document).ready(function() {
         console.log(userScore);
 
         if (userScore === targetScore) {
-            $("#wins").html("Wins: " + wins++);
+            wins++;
+            $("#wins").html("Wins: " + wins);
+            $("#victory-defeat").html("<h2>Victory!</h2>")
             console.log("winner winner!");
             reset();
         } else if (userScore > targetScore) {
-            $("#loss").html("Loss: " + loss++);
+            loss++;
+            $("#loss").html("Loss: " + loss);
+            $("#victory-defeat").html("<h2>Defeat!</h2>")
             console.log("loser")
             reset();
         }
@@ -62,11 +70,15 @@ $(document).ready(function() {
         console.log(userScore);
 
         if (userScore === targetScore) {
-            $("#wins").html("Wins: " + wins++);
+            wins++;
+            $("#wins").html("Wins: " + wins);
+            $("#victory-defeat").html("<h2>Victory!</h2>")
             console.log("winner winner!");
             reset();
         } else if (userScore > targetScore) {
-            $("#loss").html("Loss: " + loss++);
+            loss++
+            $("#loss").html("Loss: " + loss);
+            $("#victory-defeat").html("<h2>Defeat!</h2>")
             console.log("loser")
             reset();
         }
@@ -79,11 +91,16 @@ $(document).ready(function() {
         console.log(userScore);
 
         if (userScore === targetScore) {
-            $("#wins").html("Wins: " + wins++);
+            wins++;
+            $("#wins").html("Wins: " + wins);
+            $("#victory-defeat").html("<h2>Victory!</h2>")
             console.log("winner winner!");
             reset();
+
         } else if (userScore > targetScore) {
-            $("#loss").html("Loss: " + loss++);
+            loss++;
+            $("#loss").html("Loss: " + loss);
+            $("#victory-defeat").html("<h2>Defeat!</h2>")
             console.log("loser")
             reset();
         }
@@ -94,12 +111,17 @@ $(document).ready(function() {
         targetScore = Math.floor(Math.random() * 101) + 19;
     
         $("#target-number").html(targetScore);
+        
         userScore = 0;
 
-        randomNum1 = Math.floor(Math.random() * 12) + 1;
-        randomNum2 = Math.floor(Math.random() * 12) + 1;
-        randomNum3 = Math.floor(Math.random() * 12) + 1;
-        randomNum4 = Math.floor(Math.random() * 12) + 1;
+        $("#user-number").html(userScore);
+
+        $("#victory-defeat").html("<h2></h2>")
+
+        randomNum1 = Math.floor(Math.random() * 11) + 1;
+        randomNum2 = Math.floor(Math.random() * 11) + 1;
+        randomNum3 = Math.floor(Math.random() * 11) + 1;
+        randomNum4 = Math.floor(Math.random() * 11) + 1;
     }
 
 
