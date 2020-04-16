@@ -1,63 +1,97 @@
 <!DOCTYPE html>
 <html>
-<head>
-    <meta charset="utf-8">
+  <head>
+    <meta charset="utf-8" />
     <title>Element Collector</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="stylesheet" type="text/css" href="assets/css/reset.css">
-    <link rel="stylesheet" type="text/css" href="assets/css/style.css">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-    <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo" crossorigin="anonymous"></script>
-</head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link rel="stylesheet" type="text/css" href="assets/css/reset.css" />
+    <link rel="stylesheet" type="text/css" href="assets/css/style.css" />
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+      integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+      crossorigin="anonymous"
+    />
+    <script
+      src="https://code.jquery.com/jquery-3.4.1.min.js"
+      integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo"
+      crossorigin="anonymous"
+    ></script>
+  </head>
 
-<body>
-    <div class="container text-light pt-3 mt-5">
+  <body>
+    <div class="container text-light pt-3">
+      <header>
+        <a href="index.html" class="text-center head1"
+          ><h1 class="head1">Element Collector</h1></a
+        >
+        <div class="fullscreen-wrap">
+          <img
+            src="./assets/images/avatar-the-last-airbender-wallpapers-1920x1080-for-ipad-2.jpg"
+            alt="Avatar Ang and the gang"
+          />
+        </div>
+      </header>
 
-        <header>
-            <a href="index.html" class="text-center"><h1 class="border mt-2 mx-5 p-3 head1">Element Collector</h1></a>
-        </header>
-
-        <div class="row pt-4">
-            <div class="col-sm-4 mr-2 lead text-left" id="instructions">
-                <h3><u>Instructions</u></h3>
-                <p class="instructions">There will be four crystals displayed as buttons on the page. The player will be shown a random number at the start of the game.
-
-                When the player clicks on a crystal, it will add a specific amount of points to the player's total score.</p>
-            </div>
-
-            <div class="col-sm-4 mx-auto text-center" id="gamePlay">
-                <div class="row border-bottom p-3" id="target-number"></div>
-                <div class="row p-3 mb-5" id="user-number"></div>
-                <!-- <div class="row p-3 mt-5 border" id="victory-defeat"></div> -->
-            </div>
-            <div class="col-sm-3 ml-2 text-right" id="win-loss">
-                <h3><u>Record</u></h3>
-                <div class="row border-bottom" id="wins">Wins: 0</div>
-                <div class="row" id="loss">Losses: 0</div>
-            </div>
+      <div class="row pt-4">
+        <div class="col-sm-4 mr-2 lead text-left" id="instructions">
+          <h3><u>Instructions</u></h3>
+          <p class="instructions">
+            There will be four crystals displayed as buttons on the page. The
+            player will be shown a random number at the start of the game. When
+            the player clicks on a crystal, it will add a specific amount of
+            points to the player's total score.
+          </p>
         </div>
 
-        <div class="row m-5">
-            <div class="col-sm" id="earth-element">
-                <img src="assets/images/earth-free-avatar-the-last-airbender-wallpapers-2560x1440.jpg" alt="avatar earth element" width="100%">
-            </div>
-            <div class="col-sm" id="water-element">
-                    <img src="assets/images/water-download-free-avatar-the-last-airbender-wallpapers-2560x1440.jpg" alt="avatar water element" width="100%">
-            </div>
-            <div class="col-sm" id="air-element">
-                    <img src="assets/images/air element.png" alt="avatar air element" width="100%">
-            </div>
-            <div class="col-sm" id="fire-element">
-                    <img src="assets/images/fire-avatar-the-last-airbender-wallpapers-2560x1440-ipad.jpg" alt="avatar fire element" width="100%">
-            </div>
+        <div class="col-sm-4 mx-auto text-center" id="gamePlay">
+          <div
+            class="row p-3 mt-5 border text-center"
+            id="victory-defeat"
+          ></div>
+          <div class="row border-bottom p-3" id="target-number"></div>
+          <div class="row p-3 mb-5" id="user-number"></div>
         </div>
-    
+        <div class="col-sm-3 ml-2 text-right" id="win-loss">
+          <h3><u>Record</u></h3>
+          <div class="row border-bottom" id="wins">Wins: 0</div>
+          <div class="row" id="loss">Losses: 0</div>
+        </div>
+      </div>
 
+      <div class="row m-5">
+        <div class="col-sm" id="earth-element">
+          <img
+            src="assets/images/earth-free-avatar-the-last-airbender-wallpapers-2560x1440.jpg"
+            alt="avatar earth element"
+            width="100%"
+          />
+        </div>
+        <div class="col-sm" id="water-element">
+          <img
+            src="assets/images/water-download-free-avatar-the-last-airbender-wallpapers-2560x1440.jpg"
+            alt="avatar water element"
+            width="100%"
+          />
+        </div>
+        <div class="col-sm" id="air-element">
+          <img
+            src="assets/images/air element.png"
+            alt="avatar air element"
+            width="100%"
+          />
+        </div>
+        <div class="col-sm" id="fire-element">
+          <img
+            src="assets/images/fire-avatar-the-last-airbender-wallpapers-2560x1440-ipad.jpg"
+            alt="avatar fire element"
+            width="100%"
+          />
+        </div>
+      </div>
     </div>
 
     <script src="assets/javascript/game.js"></script>
-
-</body>
-
+  </body>
 </html>

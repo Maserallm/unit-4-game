@@ -1,15 +1,64 @@
+html {
+  /* border-box box model allows us to add padding and border to our elements without increasing their size */
+  box-sizing: border-box;
+  /* A system font stack so things load nice and quick! */
+  color: whitesmoke;
+  font-family: "montserrat", sans-serif;
+  /* font-weight: 700; */
+  text-shadow: 0 2px 0 rgba(0, 0, 0, 0.1);
+}
+
+/*
+      WAT IS THIS?!
+      We inherit box-sizing: border-box; from our <html> selector
+      Apparently this is a bit better than applying box-sizing: border-box; directly to the * selector
+    */
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
 body {
-    background-image: url(../images/avatar-the-last-airbender-wallpapers-1920x1080-for-ipad-2.jpg);
-    background-repeat: repeat-y;
-    background-size: 110%; 
-    
-    /* color: #dee2e6; */
+  margin: 0;
+  overflow-x: hidden;
+  background-size: cover;
+  min-height: calc(100vh - 100px);
+  /* background-image: url(../images/avatar-the-last-airbender-wallpapers-1920x1080-for-ipad-2.jpg); */
+  /* background-repeat: no-repeat; */
+  /* background-size: 100%; */
+  /* height: auto; */
+  /* background-position: absolute; */
+  left: 0;
+  top: 0;
+  /* background: minmax(340px, auto); */
+  overflow: hidden;
+
+  /* color: #dee2e6; */
+}
+
+.head1 {
+  color: #dee2e6;
 }
 
 .head1:hover {
-    color: #dee2e6;
+  color: #9fa1a3;
+  text-decoration: none;
 }
 
+.fullscreen-wrap {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  z-index: -1;
+}
+
+.fullscreen-wrap img {
+  width: 100%;
+  height: 100%;
+}
 /* @media (max-width: 780px) {
  body {
      background-image: url()
